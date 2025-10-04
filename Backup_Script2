@@ -1,0 +1,24 @@
+#!/bin/bash
+# backup.sh - Backup /val/log/syslog files to /backup
+
+BACKUP_DIR="/home/ubuntu/backup"
+SRC_DIR="/var/log/syslog"
+DATE=$(date +%F_%H-%M-%S)
+
+# Check if backup directory exists
+if [ ! -d "$BACKUP_DIR" ]; then
+   echo " Backup directory not found. Creating one..."
+   mkdir -p "$BACKUP_DIR"
+fi
+
+# Create the backup file
+tar -czf $BACKUP_DIR/log_backup_$DATE.tar.gz $SRC_DIR
+
+# Verify backup success
+if [ $? -eq 0 ]; then
+   echo " Backup completed successfully at $DATE"
+   echo " File stored at: $BACKUP_DIR/log_backup_$DATE.tar.gz"
+else
+   echo " Backup failed. Check file permission or paths."
+fi
+
