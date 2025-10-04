@@ -1,0 +1,9 @@
+#!/bin/bash
+# backup.sh - Backup /var/log/ files to /backup
+
+BACKUP_DIR="/home/ubuntu/backup"
+SRC_DIR="/var/log/*.log"
+DATE=$(date +%F_%H-%M-%S)
+mkdir -p $BACKUP_DIR
+tar -czf $BACKUP_DIR/log_backup_$DATE.tar.gz $SRC_DIR
+echo "Backup completed at $DATE"
