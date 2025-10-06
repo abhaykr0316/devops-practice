@@ -1,10 +1,8 @@
 # 🚀 DevOps Practice Repository
 
-This repository contains my **Week 1 DevOps Foundation Practice** — focusing on **Linux, Git, Bash scripting, and DevOps fundamentals**.
+This repository contains my **DevOps Foundation Practice** — focusing on **Linux, Git, Bash scripting, and DevOps fundamentals**.
 
 ---
-
-## 🧩 Week 1 Overview
 
 ### 🔹 Focus Areas
 - Linux Commands & Automation
@@ -31,6 +29,6 @@ chmod +x <script_name>.sh
 ./<script_name>.sh
 
 --------
-Simulate High Disk Usage:-
+### Simulate High Disk Usage
 Create a large dummy file using sudo fallocate -l 5G /tmp/fillfile
 Verify your Diks usage script then remove the dummy file sudo rm -f /tmp/fillfile
