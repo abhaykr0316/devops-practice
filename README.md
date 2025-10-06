@@ -29,3 +29,8 @@ This repository contains my **Week 1 DevOps Foundation Practice** — focusing o
 cd scripts/
 chmod +x <script_name>.sh
 ./<script_name>.sh
+
+--------
+Simulate High Disk Usage:-
+Create a large dummy file using sudo fallocate -l 5G /tmp/fillfile
+Verify your Diks usage script then remove the dummy file sudo rm -f /tmp/fillfile
